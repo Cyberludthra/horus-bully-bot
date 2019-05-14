@@ -1,11 +1,8 @@
 const Discord = require('discord.js');
-const token = process.env.TOKEN;
+const { token } = require('./config.json');
 const prefix = 'l!';
 const client = new Discord.Client();
 require('dotenv/config');
-const http = require('http');
-const port = process.env.PORT || 3000;
-http.createServer().listen(port);
 client.disabledMembers = new Map();
 client.once('ready', async () => {
 	console.log('All systems online and active!');
@@ -18,6 +15,8 @@ client.once('ready', async () => {
 		},
 	});
 });
+
+client.login(token);
 
 
 // START UP BOT
@@ -911,9 +910,3 @@ client.on('message', function(message) {
 	}
 }
 );
-
-client.on('error', err => {
-	console.log(err);
-});
-
-client.login(token);
