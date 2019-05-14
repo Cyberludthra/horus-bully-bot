@@ -1,5 +1,6 @@
 const Discord = require('discord.js');
-const { token } = require('./config.json');
+// const { token } = require('./config.json');
+const token = 'NTc3ODcyMzY0MzMxNTk3ODc0.XNrXnA.D2Ab4yil4tGDSIxYiUgiBSSXL4M';
 const prefix = 'l!';
 const client = new Discord.Client();
 require('dotenv/config');
@@ -42,16 +43,6 @@ client.on('message', function(message) {
 		'Jack off and think about that one again',
 		'Not sure about that one',
 	];
-	const whyElin = [
-		'W-Why, Elin... ;3;... W-What did i do to you?... I l-love you... :\'\'(.. P-P-Please don\'t h-hate me...',
-		'E-Elin.. Please!! I\'m here to make y-you happy and to e-entertain you... Why must you hate me?... :""(',
-		'P-Please!! I can be better!!! L-Ludthra spent so much time on me... I feel like i have a p-purpose here! P-Please don\'t take that a-away from me, Elin-tan ;3;..',
-		'Elin... I love you... I love everyone here... J-Just please... Please don\'t g-get rid of me... ;w;',
-		'P-PLEASE I CAN B-BE BETTER!! I PROMISE!! P-PLEASE DON\'T B-BEAT ME LIKE MY OLD M-MASTER DID!! P-PLEASE...',
-		'I g-get sad when i d-don\'t k-know how to please you... I-It\'s my only purpose and... And... And i f-fail at that too... :""(',
-		'I-I.... I\'m n-nothing but just another useless bot, aren\'t I?... Y-You\'re... You\'re right... I d-didn\'t ask to be born, y-you know?.. I j-just try t-to do good...',
-		'I-I\'m sorry if i "Make fun" of you... I-It\'s just what i was programmed t-to do... I t-thought p-people found me funny!... Now i\'m just a useless piece o-of boring code... I f-finally see that...',
-	];
 	const decision = new Discord.RichEmbed()
 		.setColor(0x6B0DF1)
 		.setFooter('React to confirm or deny a decision.')
@@ -59,12 +50,6 @@ client.on('message', function(message) {
 		.setTitle('Decide!');
 
 	switch (args[0].toLowerCase()) {
-	case 'whyelin':
-		message.delete({ timeout: 1000 });
-		if (args[0]) {
-			message.channel.send(whyElin[Math.floor(Math.random() * whyElin.length)]);
-		}
-		break;
 	case 'decide':
 		message.channel.send({ embed: decision }).then(embedMessage => {
 			(embedMessage.react('✅'))
@@ -119,17 +104,12 @@ client.on('message', function(message) {
 		message.channel.send('http://www.fleshtunnel.com');
 		break;
 
-	case 'bullystaff':
-		message.channel.send('<@258435775161565186>');
-		message.channel.send('Overly-Hyper.');
-		message.channel.send('<@247660958619664384>');
-		message.channel.send('Edgy.');
-		message.channel.send('<@381392419620651008>');
-		message.channel.send('Faggot.');
-		message.channel.send('<@260044575261982720>');
-		message.channel.send('Tranny.');
-		message.channel.send('<@256023424483196928>');
-		message.channel.send('Boring.');
+	case 'whoiskryo':
+		message.channel.send('**Kryo** has all your favorite Waifus and is also **Jericho\'s** Mistress.');
+		break;
+
+	case 'whoisjericho':
+		message.channel.send('**Jericho** tries to be a good ther but fails terribly, but also xD :smile: xDddd :smile: :smile: :smile: xDdd.');
 		break;
 
 	case 'avatar':
@@ -155,6 +135,11 @@ client.on('message', message => {
 	if(message.author.bot) return;
 	const commandcase = message.content.toLowerCase();
 	const pingmentionedmember = message.mentions.users.first();
+	const isGay = [
+		'It the truth though :pensive: :pensive: :pensive:',
+		pingmentionedmember + 'is gay asf tho.',
+		'You\'re not wrong... :pensive:',
+	];
 
 	// "lmao Detection Bully" Command
 	if (commandcase.includes('lmao') || commandcase.includes('l m a o') || commandcase.includes('lmfao') || commandcase.includes('l m f a o')) {
@@ -177,6 +162,10 @@ client.on('message', message => {
 		message.channel.send('', {
 			file: 'https://cdn.discordapp.com/attachments/374885445030510592/570556768707674132/tenor.gif',
 		});
+	}
+	// "clowning Detection Bully" Command
+	if (commandcase.includes('is gay') & commandcase.includes('<@') & commandcase.includes('>') != commandcase.includes('!567328033254408209') || commandcase.includes('be gay') & commandcase.includes('<@') & commandcase.includes('>') != commandcase.includes('!567328033254408209') || commandcase.includes('gay') & commandcase.includes('<@') & commandcase.includes('>') != commandcase.includes('!567328033254408209')) {
+		message.channel.send(isGay[Math.floor(Math.random() * isGay.length)]);
 	}
 	// "TITI Detection Bully" Command
 	if (commandcase.includes('titi')) {
@@ -201,7 +190,7 @@ client.on('message', message => {
 		});
 	}
 	// "clowning Detection Bully" Command
-	if (commandcase.includes('clowning') & commandcase.includes('<@') & commandcase.includes('>') != commandcase.includes('!567328033254408209')) {
+	if (commandcase.includes('clowning') & commandcase.includes('<@') & commandcase.includes('>') != commandcase.includes('!567328033254408209') || commandcase.includes('clowning') & commandcase.includes('<@') & commandcase.includes('>') != commandcase.includes('!567328033254408209')) {
 		message.channel.send(pingmentionedmember + ' out here clowning.', {
 			file: 'https://cdn.discordapp.com/attachments/391235516647079938/567982442053632000/clowning.jpg',
 		});
@@ -212,12 +201,12 @@ client.on('message', message => {
 		});
 	}
 	// "Fuck you BullyBot" Command
-	if (commandcase.includes('fuck you') & commandcase.includes('<@') & commandcase.includes('>') & commandcase.includes('!') || commandcase.includes('fuck') & commandcase.includes('<@') & commandcase.includes('>') & commandcase.includes('!')) {
+	if (commandcase.includes('fuck you') & commandcase.includes('<@') & commandcase.includes('>')) {
 		message.channel.send('Nah fuck YOU, ' + message.author, {
 		});
 	}
 	// "@everyone Detection Bully" Command
-	if (commandcase.includes === 'Supercalifragilisticexpialidocious') {
+	if (commandcase.includes ('Supercali')) {
 		message.channel.send('Some Faggot: *Pings everyone on the fucking server.*');
 		message.channel.send('@everyone: :angry:');
 	}
@@ -246,9 +235,6 @@ client.on('message', function(message) {
 		if(HasOperatorRole) {
 			message.channel.send('Either you ARE an operator, or this shit failed.');
 		}
-		break;
-	case 'waf':
-		message.channel.send('$w');
 		break;
 	case 'help':
 		if(!HasOperatorRole) {
