@@ -109,7 +109,7 @@ client.on('message', function(message) {
 		break;
 
 	case 'whoisjericho':
-		message.channel.send('**Jericho** tries to be a good ther but fails terribly, but also xD :smile: xDddd :smile: :smile: :smile: xDdd.');
+		message.channel.send('**Jericho** tries to be a good therapist but fails terribly, but also xD :smile: xDddd :smile: :smile: :smile: xDdd.');
 		break;
 
 	case 'avatar':
