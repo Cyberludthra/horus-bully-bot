@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
-// const { token } = require('./config.json');
-const token = 'NTc3ODcyMzY0MzMxNTk3ODc0.XNrXnA.D2Ab4yil4tGDSIxYiUgiBSSXL4M';
+const { token } = require('./config.json');
+// const token = 'NTc3ODcyMzY0MzMxNTk3ODc0.XNrXnA.D2Ab4yil4tGDSIxYiUgiBSSXL4M';
 const prefix = 'l!';
 const client = new Discord.Client();
 require('dotenv/config');
