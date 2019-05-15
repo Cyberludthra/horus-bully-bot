@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const { token } = require('./config.json');
 // const token = 'NTc3ODcyMzY0MzMxNTk3ODc0.XNrXnA.D2Ab4yil4tGDSIxYiUgiBSSXL4M';
-const prefix = 'l!';
+const prefix = ('l!');
 const client = new Discord.Client();
 require('dotenv/config');
 client.disabledMembers = new Map();
@@ -65,11 +65,11 @@ client.on('message', function(message) {
 		break;
 
 	case 'help':
-		message.channel.send('**━━━━━ Help Panel ━━━━━**\n\n\n			-= Typed Commands =-\n\nl!help | The command you\'re using now, dumbass.\nl!whois[User] | To see who your friends REALLY are.\nl!niggaball [Question] | To ask the NiggaBall:tm: a question you would like answered.\n\n\n			-= Detection Commands =-\n\n"lmao" | Our kind bot helps you pick up what you have lost.\n"true true" | true true.\n"bruh" | Solidifies a bruh moment.\n(User) out here "clowning" | Exposes a clown nigga.\n[REDACTED INFORMATION] | A secret phrase that allows you to ping EVERYONE on the server without having the permission enabled.');
+		message.channel.send('**━━━━━ Help Panel ━━━━━**\n\n\n			-= Typed Commands =-\n\nl!help | The command you\'re using now, dumbass.\nl!whois[User] | To see who your friends REALLY are.\nl!niggaball [Question] | To ask the NiggaBall:tm: a question you would like answered.\nl!avatar | Displays the mentioned member\'s Avatar in a bigger format.\n\n\n			-= Detection Commands =-\n\n"lmao" | Our kind bot helps you pick up what you have lost.\n"true true" | true true.\n"bruh" | Solidifies a bruh moment.\n(User) out here "clowning" | Exposes a clown nigga.\n[REDACTED INFORMATION] | A secret phrase that allows you to ping EVERYONE on the server without having the permission enabled.');
 		break;
 
 	case 'whois':
-		message.channel.send('Command Usage: "l!whois(User)"\n\nAvalible Users: Emil, Elin, Carl, Yono, Ben, Ludthra, Makoto, Kongou.');
+		message.channel.send('Command Usage: "l!whois(User)"\n\nAvalible Users: Emil, Elin, Carl, Yono, Arka, Ludthra, Makoto, Kongou, Jericho, Kryo.');
 		break;
 
 	case 'whoiselin':
@@ -109,7 +109,7 @@ client.on('message', function(message) {
 		break;
 
 	case 'whoisjericho':
-		message.channel.send('**Jericho** tries to be a good therapist but fails terribly, but also xD :smile: xDddd :smile: :smile: :smile: xDdd.');
+		message.channel.send('**Jericho** tries to be a good therapist but fails terribly, but also xD :smile: xDddd :smile: :smile: :smile: xDdd. Anyways.');
 		break;
 
 	case 'avatar':
