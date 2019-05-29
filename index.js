@@ -37,27 +37,15 @@ client.on('message', function(message) {
 		'Ah, here we go again',
 		'Hell no',
 		'No; Thats seriously gay',
-		'That seems like an Emil Moment',
+		'That seems like an Bruh Moment',
 		'My bruhs say yeah',
 		'Hell yeah',
 		'Jack off and think about that one again',
 		'Not sure about that one',
 	];
-	const decision = new Discord.RichEmbed()
-		.setColor(0x6B0DF1)
-		.setFooter('React to confirm or deny a decision.')
-		.setDescription(args.slice(1).join(' '))
-		.setTitle('Decide!');
 
-	switch (args[0].toLowerCase()) {
-	case 'decide':
-		message.channel.send({ embed: decision }).then(embedMessage => {
-			(embedMessage.react('✅'))
-				.then(embedMessage.react('❌'));
-		});
-		message.delete({ timeout: 1000 });
-		break;
-
+	if (!message.content.startsWith(prefix) || message.author.bot) return;
+	switch (args[0].shift().toLowerCase()) {
 	case 'niggaball':
 		if (args[1]) {
 			message.channel.send(fortunes[Math.floor(Math.random() * fortunes.length)] + ', my nigga.');
@@ -69,15 +57,7 @@ client.on('message', function(message) {
 		break;
 
 	case 'whois':
-		message.channel.send('Command Usage: "l!whois(User)"\n\nAvalible Users: Emil, Elin, Carl, Yono, Arka, Ludthra, Makoto, Kongou, Jericho, Kryo.');
-		break;
-
-	case 'whoiselin':
-		message.channel.send('**Elin** is-- **~~REDACTED ARTICLE V84-3371. ARTICLE INFORMATION NOT GIVEN. REASONDELETEOVERWRITTEN "Don\'t you fucking dare." REDACTION SUCCESSFUL ARTICLE LOCK-3371.~~**');
-		break;
-
-	case 'whoisemil':
-		message.channel.send('**Emil** is an illiterate fuck who can\'t type a single fucking word properly.');
+		message.channel.send('Command Usage: "l!whois(User)"\n\nAvalible Users: Carl, Yono, Arka, Makoto, Kongou, Jericho, Kryo.');
 		break;
 
 	case 'whoismakoto':
@@ -85,7 +65,7 @@ client.on('message', function(message) {
 		break;
 
 	case 'whoiskongou':
-		message.channel.send('**Kongou** is an american Weeb/Cheeb who flexes his knowledge about aSiAn cUlTuReS any second he gets. He also posted his dick once or twice on here.');
+		message.channel.send('**Kongou** is an american Weeb/Cheeb who flexes his knowledge about aSiAn cUlTuReS any second he gets. He\'s also Top Tier Pedo.');
 		break;
 
 	case 'whoiscarl':
@@ -179,6 +159,7 @@ client.on('message', message => {
 			file: 'https://pbs.twimg.com/profile_images/1066371730074144769/dXKx9agF_400x400.jpg',
 		});
 	}
+
 	if(message.author.bot) return;
 	const args = message.content.trim().split(/ +/g);
 	if((args[0].toLowerCase() == 'i\'m' || args[0].toLowerCase() == 'im' || args[0].toLowerCase() == 'am') && (args[1]) && !client.disabledMembers.has(message.author.id)) {
