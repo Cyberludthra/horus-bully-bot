@@ -304,28 +304,11 @@ client.on('message', function(message) {
 	const CR55 = message.member.guild.roles.find(r => r.name == 'Perky Graphite Grey'); const CR56 = message.member.guild.roles.find(r => r.name == 'Softened Cream White');
 	const CR57 = message.member.guild.roles.find(r => r.name == 'Dazzling Daisy White');
 
-	const ImperialR = message.member.guild.roles.find(r => r.name == '🔮 Imperial 🔮'); const ReignSupR = message.member.guild.roles.find(r => r.name == '👑 Reign Supreme 👑');
-	const ReignR = message.member.guild.roles.find(r => r.name == '💎 Reign 💎'); const TinkererR = message.member.guild.roles.find(r => r.name == '⚙️ Tinkerer ⚙️');
-	const OfficerR = message.member.guild.roles.find(r => r.name == '🚨 Officer 🚨');
-	function HasOperatorRole() {
-		mem.roles.has(ImperialR.id) || mem.roles.has(ReignSupR) || mem.roles.has(ReignR) || mem.roles.has(TinkererR) || mem.roles.has(OfficerR);
-	}
 	const HaveColorRole = mem.roles.has(CR1.id) || mem.roles.has(CR2.id) || mem.roles.has(CR3.id) || mem.roles.has(CR4.id) || mem.roles.has(CR5.id) || mem.roles.has(CR6.id) || mem.roles.has(CR7.id) || mem.roles.has(CR8.id) || mem.roles.has(CR9.id) || mem.roles.has(CR10.id) || mem.roles.has(CR11.id) || mem.roles.has(CR12.id) || mem.roles.has(CR13.id) || mem.roles.has(CR14.id) || mem.roles.has(CR15.id) || mem.roles.has(CR16.id) || mem.roles.has(CR17.id) || mem.roles.has(CR18.id) || mem.roles.has(CR19.id) || mem.roles.has(CR20.id) || mem.roles.has(CR21.id) || mem.roles.has(CR22.id) || mem.roles.has(CR23.id) || mem.roles.has(CR24.id) || mem.roles.has(CR25.id) || mem.roles.has(CR26.id) || mem.roles.has(CR27.id) || mem.roles.has(CR28.id) || mem.roles.has(CR29.id) || mem.roles.has(CR30.id) || mem.roles.has(CR31.id) || mem.roles.has(CR32.id) || mem.roles.has(CR33.id) || mem.roles.has(CR34.id) || mem.roles.has(CR35.id) || mem.roles.has(CR36.id) || mem.roles.has(CR37.id) || mem.roles.has(CR38.id) || mem.roles.has(CR39.id) || mem.roles.has(CR40.id) || mem.roles.has(CR41.id) || mem.roles.has(CR42.id) || mem.roles.has(CR43.id) || mem.roles.has(CR44.id) || mem.roles.has(CR45.id) || mem.roles.has(CR46.id) || mem.roles.has(CR47.id) || mem.roles.has(CR48.id) || mem.roles.has(CR49.id) || mem.roles.has(CR50.id) || mem.roles.has(CR51.id) || mem.roles.has(CR52.id) || mem.roles.has(CR53.id) || mem.roles.has(CR54.id) || mem.roles.has(CR55.id) || mem.roles.has(CR56.id) || mem.roles.has(CR57.id);
 	switch (args[0].toLowerCase()) {
 	case 'crwipe':
 		if(commandcase.includes('cr')) {
 			mem.removeRole(CR1) & mem.removeRole(CR2) & mem.removeRole(CR3) & mem.removeRole(CR4) & mem.removeRole(CR5) & mem.removeRole(CR6) & mem.removeRole(CR7) & mem.removeRole(CR8) & mem.removeRole(CR9) & mem.removeRole(CR10) & mem.removeRole(CR11) & mem.removeRole(CR12) & mem.removeRole(CR13) & mem.removeRole(CR14) & mem.removeRole(CR15) & mem.removeRole(CR16) & mem.removeRole(CR17) & mem.removeRole(CR18) & mem.removeRole(CR19) & mem.removeRole(CR20) & mem.removeRole(CR21) & mem.removeRole(CR22) & mem.removeRole(CR23) & mem.removeRole(CR24) & mem.removeRole(CR25) & mem.removeRole(CR26) & mem.removeRole(CR27) & mem.removeRole(CR28) & mem.removeRole(CR29) & mem.removeRole(CR30) & mem.removeRole(CR31) & mem.removeRole(CR32) & mem.removeRole(CR33) & mem.removeRole(CR34) & mem.removeRole(CR35) & mem.removeRole(CR36) & mem.removeRole(CR37) & mem.removeRole(CR38) & mem.removeRole(CR39) & mem.removeRole(CR40) & mem.removeRole(CR41) & mem.removeRole(CR42) & mem.removeRole(CR43) & mem.removeRole(CR44) & mem.removeRole(CR45) & mem.removeRole(CR46) & mem.removeRole(CR47) & mem.removeRole(CR48) & mem.removeRole(CR49) & mem.removeRole(CR50) & mem.removeRole(CR51) & mem.removeRole(CR52) & mem.removeRole(CR53) & mem.removeRole(CR54) & mem.removeRole(CR55) & mem.removeRole(CR56) & mem.removeRole(CR57);
-		}
-		break;
-
-	case 'remove1':
-		if(HasOperatorRole) {
-			if (args[1]) {
-				member.removeRole(CR1);
-			}
-		}
-		if(!HasOperatorRole) {
-			message.channel.send('You are not an Operator!');
 		}
 		break;
 
