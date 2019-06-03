@@ -45,7 +45,7 @@ client.on('message', function(message) {
 	];
 
 	if (!message.content.startsWith(prefix) || message.author.bot) return;
-	switch (args[0].shift().toLowerCase()) {
+	switch (args[0].toLowerCase()) {
 	case 'niggaball':
 		if (args[1]) {
 			message.channel.send(fortunes[Math.floor(Math.random() * fortunes.length)] + ', my nigga.');
